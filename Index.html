@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Master Girl Secrets - Love Of Romance</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg-color: #0a0a0a;
+            --card-bg: #121212;
+            --primary-color: #ff003c; /* Ultra Bright Neon Crimson */
+            --primary-glow: rgba(255, 0, 60, 0.8);
+            --text-main: #ffffff;
+            --text-muted: #b3b3b3;
+            --accent-gold: #ffd700;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 30px 10px;
+        }
+
+        .tagline {
+            color: var(--primary-color);
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            text-shadow: 0 0 10px rgba(255, 0, 60, 0.4);
+        }
+
+        .headline {
+            font-size: 28px;
+            font-weight: 700;
+            line-height: 1.3;
+            margin-bottom: 25px;
+        }
+
+        .product-img-container {
+            position: relative;
+            margin-bottom: 25px;
+        }
+
+        .product-img {
+            width: 100%;
+            max-width: 320px;
+            border-radius: 12px;
+            border: 2px solid #1a1a1a;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.7);
+        }
+
+        /* Timer Box */
+        .timer-box {
+            background: linear-gradient(145, #161616, #0d0d0d);
+            border: 1px solid rgba(255, 0, 60, 0.4);
+            border-radius: 12px;
+            padding: 15px;
+            margin-bottom: 25px;
+            box-shadow: 0 0 15px rgba(255, 0, 60, 0.15);
+        }
+
+        .timer-text {
+            font-size: 14px;
+            color: var(--text-muted);
+            margin-bottom: 5px;
+        }
+
+        .timer-display {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary-color);
+            letter-spacing: 1px;
+            text-shadow: 0 0 10px rgba(255, 0, 60, 0.5);
+        }
+
+        /* Pricing Area */
+        .price-container {
+            margin-bottom: 25px;
+        }
+
+        .old-price {
+            text-decoration: line-through;
+            color: var(--text-muted);
+            font-size: 16px;
+            margin-right: 10px;
+        }
+
+        .new-price {
+            color: var(--accent-gold);
+            font-size: 32px;
+            font-weight: 700;
+        }
+
+        /* ULTRA BRIGHT GLOWING CTA BUTTONS */
+        .cta-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135, #ff003c, #ff3366); /* Super Bright Red Gradient */
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 19px;
+            padding: 18px 30px;
+            border-radius: 50px;
+            box-shadow: 0 0 25px var(--primary-glow); /* Strong Neon Glow */
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            margin: 20px 0 30px 0;
+            text-transform: uppercase;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            width: 100%;
+            cursor: pointer;
+            letter-spacing: 0.5px;
+            text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+        }
+
+        .cta-btn:hover {
+            transform: scale(1.04);
+            background: linear-gradient(135, #ff1a4f, #ff4d79);
+            box-shadow: 0 0 35px rgba(255, 0, 60, 1); /* Intense Glow on Hover */
+        }
+
+        .cta-btn i {
+            margin-left: 12px;
+            font-size: 20px;
+        }
+
+        /* Section Titles */
+        .section-title {
+            font-size: 22px;
+            text-align: center;
+            margin: 40px 0 20px 0;
+            position: relative;
+            font-weight: 700;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 3px;
+            background-color: var(--primary-color);
+            margin: 8px auto 0 auto;
+            border-radius: 2px;
+        }
+
+        /* Benefits Cards */
+        .benefit-card {
+            background-color: var(--card-bg);
+            border: 1px solid #1f1f1f;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: flex-start;
+            transition: border 0.3s ease;
+        }
+
+        .benefit-card:hover {
+            border-color: rgba(255, 0, 60, 0.5);
+        }
+
+        .benefit-icon {
+            color: var(--primary-color);
+            font-size: 24px;
+            margin-right: 15px;
+            margin-top: 3px;
+            width: 30px;
+            text-align: center;
+        }
+
+        .benefit-info h3 {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 5px;
+            color: var(--text-main);
+        }
+
+        .benefit-info p {
+            font-size: 14px;
+            color: var(--text-muted);
+        }
+
+        /* Bonus Cards */
+        .bonus-card {
+            background-color: var(--card-bg);
+            border: 1px solid #222;
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .bonus-badge {
+            background-color: var(--primary-color);
+            color: white;
+            font-size: 11px;
+            font-weight: 700;
+            padding: 4px 12px;
+            border-radius: 20px;
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            text-transform: uppercase;
+            box-shadow: 0 0 10px var(--primary-glow);
+        }
+
+        .bonus-card h3 {
+            font-size: 18px;
+            margin-bottom: 15px;
+            color: var(--accent-gold);
+            padding-right: 80px;
+            text-align: left;
+        }
+
+        .bonus-img {
+            width: 100%;
+            max-width: 220px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+        }
+
+        .bonus-desc {
+            font-size: 14px;
+            color: var(--text-muted);
+            text-align: left;
+        }
+
+        /* Social Proof Stack */
+        .proof-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .proof-img {
+            width: 100%;
+            border-radius: 10px;
+            border: 1px solid #222;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+        }
+
+        /* Trust Badges */
+        .trust-bar {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color: #0f0f0f;
+            border-radius: 10px;
+            padding: 15px 10px;
+            margin: 30px 0;
+            border: 1px solid #1c1c1c;
+        }
+
+        .trust-item {
+            text-align: center;
+            font-size: 11px;
+            color: var(--text-muted);
+        }
+
+        .trust-item i {
+            color: var(--primary-color);
+            font-size: 18px;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        /* FAQ Accordion */
+        .faq-item {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            margin-bottom: 10px;
+            overflow: hidden;
+            border: 1px solid #1a1a1a;
+        }
+
+        .faq-question {
+            padding: 15px 20px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            user-select: none;
+        }
+
+        .faq-answer {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            font-size: 13px;
+            color: var(--text-muted);
+            border-top: 0 solid transparent;
+        }
+
+        .faq-item.active .faq-answer {
+            padding: 15px 20px;
+            max-height: 200px;
+            border-top: 1px solid #222;
+        }
+
+        .faq-icon {
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(45deg);
+            color: var(--primary-color);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 40px 10px 20px 10px;
+            color: var(--text-muted);
+            font-size: 12px;
+            border-top: 1px solid #111;
+            margin-top: 40px;
+        }
+
+        .footer-price {
+            font-size: 20px;
+            color: var(--text-main);
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <section class="hero">
+            <div class="tagline">Unlock Your Ultimate Seductive Power & Irresistible Aura</div>
+            <h1 class="headline">Master The Secret Art Of Attraction & Romance</h1>
+            
+            <div class="product-img-container">
+                <img src="https://i.ibb.co/hrx53Ps/Picsart-26-05-17-11-41-24-892.jpg" alt="Master Girl Secrets Book Cover" class="product-img">
+            </div>
+
+            <div class="timer-box">
+                <div class="timer-text"><i class="fa-solid fa-bolt" style="color: var(--accent-gold);"></i> Special Offer Expiring Soon! Time Left:</div>
+                <div id="countdown" class="timer-display">02h 37m 00s</div>
+            </div>
+
+            <div class="price-container">
+                <span class="old-price">₹299</span>
+                <span class="new-price">₹199 Only</span>
+            </div>
+
+            <a href="https://superprofile.bio/vp/master-girl-secret-love-of-romance" class="cta-btn">
+                Claim Your Copy Now - ₹199 <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </section>
+
+        <section>
+            <h2 class="section-title">Why You Need This Blueprint</h2>
+            
+            <div class="benefit-card">
+                <div class="benefit-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                <div class="benefit-info">
+                    <h3>Feminine Aura Boost</h3>
+                    <p>Apni presence ko itna magnetic banayein ki koi ignore na kar sake.</p>
+                </div>
+            </div>
+
+            <div class="benefit-card">
+                <div class="benefit-icon"><i class="fa-solid fa-magnet"></i></div>
+                <div class="benefit-info">
+                    <h3>Attraction Without Chasing</h3>
+                    <p>Kisi ke peeche bhaagne ki zarurat nahi, log khud aapki taraf khinche chale aayenge.</p>
+                </div>
+            </div>
+
+            <div class="benefit-card">
+                <div class="benefit-icon"><i class="fa-solid fa-eye"></i></div>
+                <div class="benefit-info">
+                    <h3>Seductive Body Language</h3>
+                    <p>Bina kuch bole sirf apne eye-contact aur posture se samne wale par apna jaadu chalayein.</p>
+                </div>
+            </div>
+
+            <div class="benefit-card">
+                <div class="benefit-icon"><i class="fa-solid fa-brain"></i></div>
+                <div class="benefit-info">
+                    <h3>Psychological Triggers</h3>
+                    <p>Human mind ke un secret dark patterns ko samjhein jo normal log nahi jaante.</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="section-title">Exclusive Bonuses Included</h2>
+            <p style="text-align: center; font-size: 13px; color: var(--accent-gold); margin-top: -10px; margin-bottom: 20px; font-weight: bold;">(Free For Today Only)</p>
+
+            <div class="bonus-card">
+                <span class="bonus-badge">Free</span>
+                <h3>BONUS 1: THE BLACK MIRROR MIND</h3>
+                <img src="https://i.ibb.co/HTLGJcvL/IMG-20251008-WA0006.jpg" alt="The Black Mirror Mind" class="bonus-img">
+                <div class="bonus-desc">Dark manipulation tactics ko unmask karein. Samjhein ki log aapko kaise influence karte hain aur apne mind ko ek unbreakable power shield banayein.</div>
+            </div>
+
+            <div class="bonus-card">
+                <span class="bonus-badge">Free</span>
+                <h3>BONUS 2: EFFORTLESS TEXTING</h3>
+                <img src="https://i.ibb.co/chZ63HrF/IMG-20251008-WA0008.jpg" alt="Effortless Texting Guide" class="bonus-img">
+                <div class="bonus-desc">Texting ke zariye attraction build karne ki ultimate art. Jaano kab, kya aur kaise text karna hai taaki samne wala aapke reply ka wait kare.</div>
+            </div>
+
+            <a href="https://superprofile.bio/vp/master-girl-secret-love-of-romance" class="cta-btn">
+                Get Book + All Bonuses Now <i class="fa-solid fa-gift"></i>
+            </a>
+        </section>
+
+        <section>
+            <h2 class="section-title">What Our Readers Are Saying</h2>
+            
+            <div class="proof-container">
+                <img src="https://i.ibb.co/G35KTT1j/mirrorcontroll-20260517-0001.jpg" alt="Review 1" class="proof-img">
+                <img src="https://i.ibb.co/C58yN6RW/mirrorcontroll-20260517-0003.jpg" alt="Review 2" class="proof-img">
+                <img src="https://i.ibb.co/Pzbc3n3F/IMG-20260331-WA0002.jpg" alt="Review 3" class="proof-img">
+                <img src="https://i.ibb.co/G3FM2Cm6/IMG-20260331-WA0001.jpg" alt="Review 4" class="proof-img">
+                <img src="https://i.ibb.co/VW3FThRD/Screenshot-2026-05-17-12-05-46-911-com-whatsapp-edit.jpg" alt="Review 5" class="proof-img">
+            </div>
+        </section>
+
+        <div class="trust-bar">
+            <div class="trust-item">
+                <i class="fa-solid fa-shield-halved"></i>
+                100% Secure Checkout
+            </div>
+            <div class="trust-item">
+                <i class="fa-solid fa-bolt"></i>
+                Instant Download
+            </div>
+            <div class="trust-item">
+                <i class="fa-solid fa-clock-rotate-left"></i>
+                Lifetime Access
+            </div>
+        </div>
+
+        <section>
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    Yeh E-book kis language me hai?
+                    <span class="faq-icon"><i class="fa-solid fa-plus"></i></span>
+                </div>
+                <div class="faq-answer">
+                    Yeh book bahut hi simple aur easy Hinglish (Hindi + English mix) me hai jise aap aasaani se samajh sakte hain.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    Payment ke baad PDF kaise milega?
+                    <span class="faq-icon"><i class="fa-solid fa-plus"></i></span>
+                </div>
+                <div class="faq-answer">
+                    Instant download link screen par aayega, aur saath hi aapke register kiye gaye email par bhi copy turant bhej di jayegi.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    Kya bonuses ke liye alag se pay karna hoga?
+                    <span class="faq-icon"><i class="fa-solid fa-plus"></i></span>
+                </div>
+                <div class="faq-answer">
+                    Bilkul nahi! Agar aap aaj order karte hain, toh dono high-value bonuses aapko is offer ke sath bilkul FREE milenge.
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="footer-price">Complete Package Just For ₹199</div>
+            
+            <a href="https://superprofile.bio/vp/master-girl-secret-love-of-romance" class="cta-btn">
+                Get Instant Access
+            </a>
+            
+            <p style="margin-top: 20px; opacity: 0.5;">© 2026 DarkRomanceCode. All rights reserved.</p>
+        </footer>
+
+    </div>
+
+    <script>
+        // Countdown Timer Logic
+        const TIMER_KEY = "landing_page_timer_duration";
+        const DEFAULT_TIME = (2 * 60 * 60) + (37 * 60); // 2 hours 37 minutes in seconds
+
+        let timeLeft = localStorage.getItem(TIMER_KEY);
+        if (timeLeft === null) {
+            timeLeft = DEFAULT_TIME;
+            localStorage.setItem(TIMER_KEY, timeLeft);
+        } else {
+            timeLeft = parseInt(timeLeft, 10);
+        }
+
+        const timerDisplay = document.getElementById("countdown");
+
+        function updateTimer() {
+            if (timeLeft <= 0) {
+                timeLeft = DEFAULT_TIME; // Loops back gracefully
+            } else {
+                timeLeft--;
+            }
+            localStorage.setItem(TIMER_KEY, timeLeft);
+
+            let hrs = Math.floor(timeLeft / 3600);
+            let mins = Math.floor((timeLeft % 3600) / 60);
+            let secs = timeLeft % 60;
+
+            hrs = hrs < 10 ? "0" + hrs : hrs;
+            mins = mins < 10 ? "0" + mins : mins;
+            secs = secs < 10 ? "0" + secs : secs;
+
+            timerDisplay.innerHTML = `${hrs}h ${mins}m ${secs}s`;
+        }
+
+        setInterval(updateTimer, 1000);
+        updateTimer();
+
+        // FAQ Accordion Logic
+        const faqQuestions = document.querySelectorAll(".faq-question");
+        faqQuestions.forEach(question => {
+            question.addEventListener("click", () => {
+                const item = question.parentElement;
+                item.classList.toggle("active");
+            });
+        });
+    </script>
+</body>
+</html>
